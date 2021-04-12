@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+    h5 Statistics
+    hr
+    .row
+        table.striped
+            thead
+                tr
+                    th Category
+                    th Products quantity
+                    th Average price
+                    th Total sum
+                    th Min price
+                    th Max price
+            tbody
+                each category in categories 
+                    tr
+                        td=category.name     
+                        td=category.productsQuantity.toFixed(2)
+                        td=category.averagePrice.toFixed(2)
+                        td=category.totalSum.toFixed(2)
+                        td=category.minPrice.toFixed(2)
+                        td=category.maxPrice.toFixed(2)
+
+                        

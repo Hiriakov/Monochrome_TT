@@ -1,0 +1,21 @@
+html
+    head
+    meta(charset='utf-8')
+    style
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+    link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    body
+        nav.row 
+            .nav-wrapper.col.s10.offset-s1
+                a.brand-logo(href='/' title='To products') Monochrome
+          
+                ul#nav-mobile.right.hide-on-med-and-down
+                    li
+                        a(href='/product/create').waves-effect.waves-light.btn.right-align Add new product
+                    li
+                        a(href='/statistics') Statistics
+        .row 
+            .col.s10.offset-s1
+                 block content
+        

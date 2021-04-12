@@ -1,0 +1,20 @@
+{
+  "name": "koa",
+  "version": "1.0.0",
+  "description": "NodeJS, KoaJS, Mongoose, PUG",
+  "main": "index.js",
+  "scripts": {
+    "start": "node cluster.js"
+  },
+  "keywords": [],
+  "author": "Hiriakov",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-mongoose": "^2.0.0",
+    "koa-pug": "^5.0.0",
+    "koa-router": "^10.0.0",
+    "mongoose": "^5.12.3"
+  }
+}

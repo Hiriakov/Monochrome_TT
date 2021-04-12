@@ -1,0 +1,30 @@
+extends layout.pug
+
+block content
+    h5 Products
+    hr
+    .row
+        table.striped
+            thead
+                tr
+                    th Name
+                    th Category
+                    th Price
+                    th In stock
+                    th Actions
+            tbody
+                each product in products
+                    tr
+                        td=product.name
+                        td
+                            each category in categories
+                                if product.category == category.id
+                                    div=category.name
+                         
+                        td=product.price
+                        td=product.inStock
+                        td 
+                            a(href='product/edit/' + product.id title='Edit product')
+                                i.material-icons create
+                            a(href='product/delete/' + product.id title='Delete product')
+                                i.material-icons delete

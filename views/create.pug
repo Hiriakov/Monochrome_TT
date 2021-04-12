@@ -1,0 +1,30 @@
+extends layout.pug
+
+block content
+    h5 New product   
+    .row
+        form(action="/product/create" method="POST").col.s12.card
+            .card-content
+                .row 
+                    .input-field.col.s12
+                        input.validate#name(type="text" name="name" required="true")
+                        label(for="name") Name
+                .row 
+                    .input-field.col.s12
+                        input.validate#price(type="text" name="price" pattern="([0-9]+)(\\.)([0-9][0-9])" required="true")
+                        label(for="price") Price (Use currency format, eg. 9.99)
+                .row 
+                    .input-field.col.s12
+                        input.validate#inStock(type="number" name="inStock" required="true")
+                        label(for="inStock") In stock (Use integer number only, eg. 9)
+                .row
+                    .input-field.col.s12
+                        select(name="category" required="true")
+                            option(value='' selected='') Choose category
+                            each category in categories 
+                                option(value=category.id) #{category.name}
+                        label Category
+                button(type="submit").btn.waves-effect.waves-light Save
+
+    script
+        include scripts/select.js
