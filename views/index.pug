@@ -21,7 +21,7 @@ block content
                                 if product.category == category.id
                                     div=category.name
                          
-                        td=product.price
+                        td=product.price.toFixed(2)
                         td=product.inStock
                         td 
                             a(href='product/edit/' + product.id title='Edit product')
